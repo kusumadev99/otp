@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+#button{
+    margin-left: 500px;
+    margin-top: 250px;
+    background-color: red;
+    height:50px;
+    width:100px;
+    border-radius: 50px;
+      }
+    </style>
+    </head>
+<body>
+  
+
+
+    <div class="box">
+        <p> OTP is:<span class="ooo"></span></p>
+        <button id="button">generate otp</button>
+       </div> 
+      
+       <script>
+        document.getElementById('button').addEventListener('click', function() {
+         var otpgen= GenerateOTP();
+         document.body.innerText = " OTP is:" + otpgen;
+     });
+       
+        function GenerateOTP(){
+            var otp=Math.floor( Math.random() * 10000);
+            return otp;
+        }
+       
+       
+       </script>
+   </script>
+</body>
+</html>
